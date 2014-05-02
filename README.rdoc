@@ -1,28 +1,11 @@
-== README
+== ProtoKoll
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This an application for handling and keeping track of meeting protocols.
 
-Things you may want to cover:
+Features include things like:
 
-* Ruby version
+ * Automatic paragraph numbering
 
-* System dependencies
+ * Keyword search
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ * Groups and user priviligies
