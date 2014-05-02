@@ -28,5 +28,7 @@ module ProtoKoll
     # config.i18n.default_locale = :de
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+#    config.active_record.table_name_prefix = "protokoll_"
   end
 end

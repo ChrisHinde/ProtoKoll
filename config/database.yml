@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: rails
+  database: protokoll
   pool: 5
   username: rails
   password: 12qwaszx
@@ -17,7 +17,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: rails
+  database: protokoll_test
   pool: 5
   username: rails
   password: 12qwaszx
@@ -25,7 +25,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: rails
+  database: protokoll
   pool: 5
   username: rails
   password: 12qwaszx
