@@ -190,3 +190,12 @@ sv:
       long: ! '%e %B %Y %H:%M'
       short: ! '%e %b %H:%M'
     pm: ''
+  activerecord:
+    models:
+      user: Användare
+    attributes:
+      user:
+        name: Namn
+        email: "E-post"
+        password: Lösenord
+        password_confirmation: "Bekräfta lösenordet"
