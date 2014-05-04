@@ -1,0 +1,19 @@
+<% provide(:title, "Logga in") %>
+<h1>Logga in</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for :session, url: sessions_path do |f| %>
+		<%
+			concat f.label :email, "E-post"
+			concat f.text_field :email
+			
+			concat f.label :password, "Lösenord"
+			concat f.password_field :password
+			
+			concat f.submit "Logga in", class: "btn btn-large btn-primary"
+		%>
+		<% end %>
+				
+	</div>
+</div>
