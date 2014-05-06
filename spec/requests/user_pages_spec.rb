@@ -53,4 +53,44 @@ describe "User pages" do
       end
     end
   end
+  
+  describe "edit" do
+    let(:user) { FactoryGirl.create(:user) }
+    let(:submit) { "Spara ändringar" }
+
+    before do
+      sign_in user
+      visit edit_user_path(user)
+    end
+    
+    describe "page" do
+      it { should have_content("Uppdatera din profil") }
+      it { should have_title("Redigera användare") }
+      #it { sho }
+    end
+    
+    describe "with invalid information" do
+      before { click_button submit }
+      
+      it { should have_content('fel!') }
+    end
+    
+    describe "with valid information" do
+      let(:new_name)  { 'New name' }
+      let(:new_email) { 'new@example.com' }
+      before do
+        fill_in "Namn",     with: new_name
+        fill_in "E-post",   with: new_email
+        fill_in "Lösenord", with: user.password
+        fill_in "Bekräfta", with: user.password
+        click_button submit
+      end
+      
+      it { should have_title(new_name) }
+      it { should have_selector('div.alert.alert-success')  }
+      it { should have_link('Logga ut', href: signout_path) }
+      specify { expect(user.reload.name).to   eq new_name   }
+      specify { expect(user.reload.email).to  eq new_email  }
+    end
+  end
 end
